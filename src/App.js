@@ -1,7 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, useTheme } from '@emotion/react';
-import { Button } from './components';
+import { JumbotronContainer } from './containers/jumbotron';
 
 function App() {
 	const theme = useTheme();
@@ -15,11 +15,14 @@ function App() {
 		>
 			<header
 				css={{
+					position: 'sticky',
+					top: 0,
 					display: 'flex',
 					justifyContent: 'space-between',
 					alignItems: 'center',
 					background: theme.bgOffset,
 					padding: '0.75rem 0.5rem',
+					boxShadow: '0 2px 10px rgba(0,0,0,0.2)',
 				}}
 			>
 				<img src="/logo.png" alt="amazon prime logo" />
@@ -29,12 +32,7 @@ function App() {
 				</div>
 			</header>
 			<main>
-				<h1>Welcome to Prime Video</h1>
-				<p>
-					Join Prime to watch the latest movies, TV shows and award-winning
-					Amazon Originals
-				</p>
-				<Button>Start your 30-day free trial</Button>
+				<JumbotronContainer />
 			</main>
 		</div>
 	);

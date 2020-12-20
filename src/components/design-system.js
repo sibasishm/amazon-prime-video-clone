@@ -7,6 +7,8 @@ const buttonVariants = (theme, variant) => ({
 
 const Button = styled.button(
 	{
+		width: '100%',
+		marginTop: '2rem',
 		padding: '1rem 1.75rem',
 		borderRadius: '2px',
 		fontWeight: 600,
