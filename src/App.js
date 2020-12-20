@@ -12,7 +12,22 @@ function App() {
 				color: theme.text,
 			}}
 		>
-			<header>I am a header</header>
+			<header
+				css={{
+					display: 'flex',
+					justifyContent: 'space-between',
+					alignItems: 'center',
+					background: theme.text,
+					color: theme.bg,
+					padding: '0.75rem 0.5rem',
+				}}
+			>
+				<img src="/logo.png" alt="amazon prime logo" />
+				<div>
+					<a href="/">EN</a>
+					<a href="/">Sign In</a>
+				</div>
+			</header>
 			<main>
 				<h1>Hello World</h1>
 			</main>
