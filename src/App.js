@@ -1,6 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, useTheme } from '@emotion/react';
+import { Button } from './components';
 
 function App() {
 	const theme = useTheme();
@@ -28,20 +29,13 @@ function App() {
 				</div>
 			</header>
 			<main>
-				<h1>Hello World</h1>
-				<button
-					css={{
-						padding: '1rem 1.75rem',
-						backgroundColor: theme.primary,
-						color: theme.text,
-						borderRadius: '2px',
-						fontWeight: 600,
-					}}
-				>
-					Start your 30-day free trial
-				</button>
+				<h1>Welcome to Prime Video</h1>
+				<p>
+					Join Prime to watch the latest movies, TV shows and award-winning
+					Amazon Originals
+				</p>
+				<Button>Start your 30-day free trial</Button>
 			</main>
-			<footer>I am a footer</footer>
 		</div>
 	);
 }
