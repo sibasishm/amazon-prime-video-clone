@@ -1,6 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, useTheme } from '@emotion/react';
+import { JumbotronContainer } from './containers/jumbotron';
 
 function App() {
 	const theme = useTheme();
@@ -14,11 +15,14 @@ function App() {
 		>
 			<header
 				css={{
+					position: 'sticky',
+					top: 0,
 					display: 'flex',
 					justifyContent: 'space-between',
 					alignItems: 'center',
 					background: theme.bgOffset,
 					padding: '0.75rem 0.5rem',
+					boxShadow: '0 2px 10px rgba(0,0,0,0.2)',
 				}}
 			>
 				<img src="/logo.png" alt="amazon prime logo" />
@@ -28,20 +32,8 @@ function App() {
 				</div>
 			</header>
 			<main>
-				<h1>Hello World</h1>
-				<button
-					css={{
-						padding: '1rem 1.75rem',
-						backgroundColor: theme.primary,
-						color: theme.text,
-						borderRadius: '2px',
-						fontWeight: 600,
-					}}
-				>
-					Start your 30-day free trial
-				</button>
+				<JumbotronContainer />
 			</main>
-			<footer>I am a footer</footer>
 		</div>
 	);
 }
