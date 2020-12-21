@@ -6,8 +6,11 @@ function JumbotronContainer() {
 	return (
 		<div>
 			{jumbotronData.map((data, id) => (
-				<Jumbotron key={id}>
-					<Jumbotron.Image src={data.image} />
+				<Jumbotron key={id} direction={id % 2 !== 0 ? 'row' : 'row-reverse'}>
+					<Jumbotron.Image
+						src={data.image}
+						direction={id % 2 !== 0 ? 'left' : 'right'}
+					/>
 					<Jumbotron.Pane>
 						<Jumbotron.Title>{data.title}</Jumbotron.Title>
 						<Jumbotron.Description>{data.description}</Jumbotron.Description>
